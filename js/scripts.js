@@ -6,7 +6,17 @@ function pingPong(enteredNumber) {
   // newNumber = enteredNumber * 5 // test function
 
   for (result = 1; result <= enteredNumber; result ++) {
-    results.push(result);
+    if (result % 15 === 0) {
+      results.push("pingpong");
+    } else if (result % 5 === 0) {
+      results.push("pong");
+    } else if (result % 3 === 0) {
+      results.push("ping");
+    } else {
+      results.push(result);
+    }
+
+
 //    console.log (results.indexOf(result));
   }
 }
@@ -30,8 +40,8 @@ $(document).ready(function(){
       pingPong(enteredNumber);
     }
     // console.log(newNumber);
-    for (result = 0; result < enteredNumber; result ++) {
-      $("#output").append("<p>" + results[result] + "</p>");
+    for (var index = 0; index < enteredNumber; index ++) {
+      $("#output").append("<p>" + results[index] + "</p>");
 
     }
     results = "";
