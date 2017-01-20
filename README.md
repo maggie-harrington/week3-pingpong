@@ -8,6 +8,17 @@
 
 _A divisibility game of numerical Ping Pong built using HTML, CSS, Bootstrap and jQuery. The program counts up from one to the user-inputted number by ones, displaying each number along the way. All displayed numbers divisible by 3 will instead display "ping", numbers divisible by 5 will display "pong", and numbers divisible by 15 will display "pingpong". All other numbers will just display the number._
 
+## Specifications
+
+| Behavior | Input Example | Output Example |
+|----------|---------------|----------------|
+| Non-numeric input: error | hello | Error: Please enter a numeric value |
+| Non-positive input: error | -2 | Error: Please enter a positive number |
+| Positive input: output will count up to input from 1 by ones  | 2 | 1, 2 |
+| All output numbers divisible by 3 replaced with "ping" | 4 | 1, 2, ping, 4 |
+| All output numbers divisible by 5 replaced with "pong" | 7 | 1, 2, ping, 4, pong, ping, 7 |
+| All output numbers divisible by 15 replaced with "pingpong" | 16 |  1, 2, ping, 4, pong, ping, 7, 8, ping, pong, 11, ping, 13, 14, pingpong, 16 |
+
 ## Setup/Installation Requirements
 
 * _Visit this page at GitHub pages: http://maggie-harrington.github.io/week3-pingpong ._
