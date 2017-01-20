@@ -1,10 +1,7 @@
 var enteredNumber;
 var result;
 var results = [];
-// var newNumber; //test variable
 function pingPong(enteredNumber) {
-  // newNumber = enteredNumber * 5 // test function
-
   for (result = 1; result <= enteredNumber; result ++) {
     if (result % 15 === 0) {
       results.push("pingpong");
@@ -15,14 +12,8 @@ function pingPong(enteredNumber) {
     } else {
       results.push(result);
     }
-
-
-//    console.log (results.indexOf(result));
   }
 }
-
-
-
 
 
 
@@ -30,8 +21,8 @@ $(document).ready(function(){
   $("form#input-number").submit(function(event){
     event.preventDefault();
     $("#output").empty();
+    results = [];
     enteredNumber = parseInt($("input#entered-number").val());
-    // console.log(enteredNumber);
     if (isNaN (enteredNumber)) {
       alert ("Error: Please enter a numeric value!");
     } else if (enteredNumber <= 0) {
@@ -39,11 +30,8 @@ $(document).ready(function(){
     } else {
       pingPong(enteredNumber);
     }
-    // console.log(newNumber);
     for (var index = 0; index < enteredNumber; index ++) {
-      $("#output").append("<p>" + results[index] + "</p>");
-
+      $("#output").append("<li>" + results[index] + "</li>");
     }
-    results = [];
   });
 });
