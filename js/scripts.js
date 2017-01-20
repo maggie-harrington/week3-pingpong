@@ -29,7 +29,7 @@ function pingPong(enteredNumber) {
 $(document).ready(function(){
   $("form#input-number").submit(function(event){
     event.preventDefault();
-    // $("#output").empty();
+    $("#output").empty();
     enteredNumber = parseInt($("input#entered-number").val());
     // console.log(enteredNumber);
     if (isNaN (enteredNumber)) {
@@ -44,6 +44,6 @@ $(document).ready(function(){
       $("#output").append("<p>" + results[index] + "</p>");
 
     }
-    results = "";
+    results = [];
   });
 });
